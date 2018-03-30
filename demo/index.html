@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>LCARS UX Demo</title>
+    <link rel="stylesheet" href="lcars-ux.css">
+    <link rel="stylesheet" href="demo.css">
+    <script src="lcars-ux.js"></script>
+    <script src="demo.js"></script>
+  </head>
+  <body>
+    <div class="app-root">
+      <div class="lcars-window header-and-footer sb-left" ref="lcars">
+        <header>
+          <h1>Lcars window</h2>
+        </header>
+        <main>
+          <aside data-top-color="blue">
+            <h3 class="bg-red-damask">Available audio channels</h3>
+            <menu>
+              <menuitem class="bg-chestnut-rose">Item 1</menuitem>
+              <menuitem>Item 2</menuitem>
+              <menuitem>Item 3</menuitem>
+            </menu>
+          </aside>
+          <div class="content">
+            <div class="lcars-app">
+              <fieldset style="width:190px" class="br-melrose">
+                <legend class="fg-orange-peel">Fieldset / Legend</legend>
+                <label class="lcars-checkbox ang-left">
+                  <span>Checkbox 01</span>
+                  <input type="checkbox" value="checkboxValue" checked />
+                </label>
+                <label class="lcars-checkbox ang-left">
+                  <span>Checckbox 02</span>
+                  <input type="checkbox" value="checkboxValue" />
+                </label>
+              </fieldset>
+            </div>
+          </div>
+        </main>
+        <footer>
+          <h2>Window Info 2</h2>
+        </footer>
+      </div>
+    </div>
+  </body>
+</html>

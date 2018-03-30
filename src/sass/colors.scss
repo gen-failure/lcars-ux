@@ -1,0 +1,59 @@
+//Taken from https://codepen.io/Mokurunner/details/eqtHl
+
+$lcars-colors: 
+  (pale-canary, #ffff99),
+  (golden-tainoi, #ffcc66),
+  (hopbush, #cc6699),
+  (blue-bell, #9999cc),
+  (danube, #6688cc),
+  (periwinkle, #ccddff),
+  (melrose, #9999ff),
+  (indigo, #4455ff),
+  (dodger-blue, #5599ff),
+  (neon-carrot, #ff9933),
+  (lilac, #cc99cc),
+  (lavender-purple, #9977aa),
+  (dodger-blue2, #3366ff),
+  (eggplant,#664466),
+  (cosmic,#774466),
+  (blue,#0011ee),
+  (chestnut-rose,#cc6666),
+  (red-damask,#dd6644),
+  (navy-blue,#000088),
+  (anakiwa,#99ccff),
+  (atomic-tangerine,#ff9966),
+  (medium-carmine,#aa5533),
+  (husk,#bbaa55),
+  (mariner,#3366cc),
+  (orange-peel,#ff9900),
+  (bourbon,#bb6622),
+  (rust,#bb4411),
+  (bahama-blue,#006699),
+  (sandy-brown,#ee9955),
+  (tamarillo,#881111);
+
+$bg-color: #000000;
+
+.lcars-window {
+  @each $i in $lcars-colors {
+
+    $ckey: nth($i,1);
+    $cval: nth($i,2);
+
+    .fg-#{$ckey} {
+      color: $cval;
+    }
+
+    .bg-#{$ckey} {
+      background-color: $cval;
+    }
+
+    .br-#{$ckey} {
+      border-color: $cval;
+    }
+  }
+}
+$sb-color: #9999ff;
+$sb-headline-color: #ffcc66;
+
+$frame-color: #bbaa55;

@@ -1,0 +1,77 @@
+fieldset {
+  display:block;
+  position:relative;
+  border-left:25px solid $frame-color;
+  border-bottom:25px solid $frame-color;
+  border-top:25px solid $frame-color;
+  border-top-left-radius: 40px;
+  border-bottom-left-radius: 40px;
+  padding-right:16px;
+  legend {
+    display:block;
+    position:absolute;
+    top:-25px;
+    left:25px;
+    line-height:25px;
+    padding: 0px 10px;
+    background-color: $bg-color;
+    font-weight: bold;
+  }
+  .lcars-button {
+    display:block;
+    width:100%;
+  }
+}
+
+.lcars-button {
+  outline: none;
+  color: $bg-color;
+  display:inline-block;
+  margin:8px;
+  font-size:16px;
+  background-color:#ccddff;
+  padding: 1em;
+  border-width:0px;
+  border-radius:25px;
+  font-weight:bold;
+  position:relative;
+  box-sizing:border-box;
+  
+  &.ang-left {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+  }
+
+  &.ang-right {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+  }
+  &.has-chip,&.checkbox {
+    padding-left: 4em;
+    &::before {
+      background-color:black;
+      position:absolute;
+      padding: 1em 0;
+      display:inline-block;
+      vertical-align: super;
+      width:2.5em;
+      text-align:center;
+      color: #ff9900; //TODO
+      left:1.5em;;
+      top:0px;
+      content: attr(data-chip);
+    }
+  }
+  &.checkbox.on {
+    background-color:#ffff99;
+    &::before {
+      content: attr(data-label-on);
+    }
+  }
+  &.checkbox.off {
+    background-color:#dd6644;
+    &::before {
+      content: attr(data-label-off);
+    }
+  }
+}
